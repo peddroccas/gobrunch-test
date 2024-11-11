@@ -1,0 +1,16 @@
+{
+    "css.validate": true, // Ativa a validação de CSS
+    "css.lint.unknownAtRules": "ignore", // Evita erros para regras desconhecidas como @apply (se estiver usando Tailwind ou PostCSS)
+    "css.completion.completePropertyWithSemicolon": true, // Sugere ponto e vírgula ao completar propriedades
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true // Ativa sugestões em strings, útil para CSS
+    },
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "ejs": "html", // Permite Emmet em arquivos EJS
+      "css": "css"
+    }
+  }
+  

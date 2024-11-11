@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Quantidade Dinâmica</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside>
+      <div class="quantity-container">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" placeholder="Type here">
+      </div>
+      <div class="obj1" style="position: absolute; bottom: 0; left: 0;">OBJ1</div>
+    </aside>
+    <main>
+      <div id="item-list"></div>
+      <div class="obj3" style="position: absolute; bottom: 0; right: 0;">OBJ3</div>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("quantity").addEventListener("input", function () {
+      const quantity = parseInt(this.value) || 0;
+      const itemList = document.getElementById("item-list");
+      itemList.innerHTML = "";
+      for (let i = 1; i <= quantity; i++) {
+        const item = document.createElement("div");
+        item.className = "item";
+        item.innerHTML = `<span class="circle">${i}</span>`;
+        itemList.appendChild(item);
+      }
+    });
+  </script>
+</body>
+</html>
